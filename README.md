@@ -1,10 +1,24 @@
-# FmsLoginModule
+# FMS Login Module
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+This is the login module of flight mamagement system
 
-## Development server
+## Dependency used
+1. npm install --save bootstrap
+2. npm install --save jquery
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Steps to use bootstrap
+1. Install dependency mentioned above
+2. Open the angular.json file of your project and include
+3.  Add to 
+	"styles": [
+		"./node_modules/bootstrap/dist/css/bootstrap.css",
+        "src/styles.css"              
+    ],
+    "scripts": [
+        "./node_modules/jquery/dist/jquery.js",
+        "./node_modules/bootstrap/dist/js/bootstrap.js"
+    ] 
+4. Restart app
 
 ## Code scaffolding
 
