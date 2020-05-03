@@ -10,14 +10,7 @@
 .card{
   text-align: center;
 }
-
-.logInBtn{
-  border-radius: 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-}
-.signUpBtn{
+.regBtn{
   border-radius: 0;
   margin-left: auto;
   margin-right: auto;
