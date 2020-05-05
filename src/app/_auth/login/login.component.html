@@ -1,31 +1,16 @@
-<div class="wrapper">
-  <div class="row">
-    <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
-      <h3 style="margin-top: 20px;">Login</h3>
-      <small>With a FRS account you can make bookings and manage
-        them quickly and easily.
-      </small>
-      <div class="row">
-        User Name : <input class="form-control" type="text" name="username" [(ngModel)]="username">
-      </div>
-      <div class="row">
-        Password : <input class="form-control" type="password" name="password" [(ngModel)]="password">
-      </div>
-      <div class="row">
-        <button (click)=checkLogin() class="logInBtn btn btn-success">
-          Login
-        </button>
-      </div>
-      <hr>
-      <div class="row">
-                <span style="margin-left: auto; margin-right: auto;">
-                    OR<br>
-                    Sign Up for a new account
-                </span>
-      </div>
-      <div class="row">
-        <button type="button" class="btn btn-primary signUpBtn" routerLink="/register">SIGN UP</button>
-      </div>
+<div class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+  <form class="bg-white rounded p-5" style="width: 500px" method="post" action="/login">
+    <h3 class="text-center mb-4 text-muted">Admin Login</h3>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" name="username">
     </div>
-  </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button style="margin-left: 10px" type="submit" class="btn btn-primary" routerLink="/admin">Sign Up</button>
+
+  </form>
 </div>
