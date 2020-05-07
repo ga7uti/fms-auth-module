@@ -3,11 +3,14 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {LoginComponent} from './_auth/login/login.component';
+import {LoginComponent} from './auth/login/login.component';
 import {FormsModule} from '@angular/forms';
-import {RegisterComponent} from './_auth/register/register.component';
-import {UserComponent} from './_auth/user/user.component';
-import {AdminComponent} from './_auth/admin/admin.component';
+import {HttpClientModule} from '@angular/common/http';
+import {RegisterComponent} from './auth/register/register.component';
+import {UserComponent} from './auth/user/user.component';
+import {AdminComponent} from './auth/admin/admin.component';
+import {UpdatePasswordComponent} from './auth/update-password/update-password.component';
+import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,17 @@ import {AdminComponent} from './_auth/admin/admin.component';
     RegisterComponent,
     UserComponent,
     AdminComponent,
+    UpdatePasswordComponent,
+    ForgotPasswordComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

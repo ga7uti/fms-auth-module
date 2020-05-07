@@ -1,0 +1,34 @@
+<div class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+  <form class="bg-white rounded p-5" style="width: 500px" (ngSubmit)="submit()">
+    <h3 class="text-center mb-4 text-muted">Login</h3>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        name="username"
+        [(ngModel)]="loginRequest.username"
+      >
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        [(ngModel)]="loginRequest.password"
+      >
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    <button
+      style="margin-left: 10px"
+      class="btn btn-dark"
+      routerLink="/register">Sign Up
+    </button>
+    <hr>
+    <p class="text-center"><a routerLink="/forgot-password">Forgot Password</a></p>
+
+  </form>
+</div>
