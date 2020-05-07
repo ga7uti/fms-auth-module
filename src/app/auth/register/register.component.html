@@ -1,28 +1,64 @@
-<div class="wrapper">
-  <div class="row">
-    <div class="card col-md-4 offset-md-4 shadow-lg p-3 mb-5 bg-white">
-      <h3 style="margin-top: 20px;">Sign Up</h3>
-      <small>With a FRS account you can make bookings and manage
-        them quickly and easily.
-      </small>
-      <div class="row">
-        User Name : <input class="form-control" type="text" name="username">
-      </div>
-      <div class="row">
-        Password : <input class="form-control" type="password" name="password"
-                          minlength="5" maxlength="50" required>
-      </div>
-      <div class="row">
-        Phone No : <input class="form-control" type="number" name="phone">
-      </div>
-      <div class="row">
-        Email : <input class="form-control" type="email" name="email">
-      </div>
-      <div class="row">
-        <button class="regBtn btn btn-success">
-          Register
-        </button>
-      </div>
+<div class="d-flex vw-100 vh-100 align-items-center justify-content-center">
+  <form class="bg-white rounded p-5" style="width: 500px">
+    <h3 class="text-center mb-4 text-muted">Register</h3>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="full_name"
+        placeholder="Enter your full name"
+        name="full_name"
+      >
     </div>
-  </div>
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Enter your user name"
+        name="username"
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Enter your email"
+        name="email"
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter your password"
+        id="password"
+        name="password"
+      >
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Enter your password again"
+        id="re-password"
+        name="re-password"
+      >
+    </div>
+
+    <div class="form-group">
+      <input
+        type="tel"
+        class="form-control"
+        id="phone_number"
+        placeholder="Enter your phone number "
+        name="phone_number"
+      >
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn  btn-primary">Register</button>
+    </div>
+
+  </form>
 </div>
