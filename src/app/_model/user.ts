@@ -1,3 +1,5 @@
+import {Role} from './role.enum';
+
 export class User {
   fullName: string;
   userName: string;
@@ -5,14 +7,23 @@ export class User {
   token: string;
   type: string;
   userPhone: string;
-  role: Array<string>;
+  roles: Role[];
   userPassword: string;
 
-  constructor(fullName: string, userName: string, email: string, userPassword: string, userPhone: string) {
-    this.fullName = fullName;
-    this.userName = userName;
-    this.email = email;
-    this.userPassword = userPassword;
-    this.userPhone = userPhone;
+  constructor(user) {
+    this.fullName = user.fullName;
+    this.userName = user.userName;
+    this.email = user.email;
+    if (user.hasOwnProperty('passwordGroup')) {
+      this.userPassword = user.passwordGroup.password;
+    }
+    this.userPhone = user.userPhone;
+    if (user.hasOwnProperty('token')) {
+      this.token = user.token;
+    }
+    if (user.hasOwnProperty('roles')) {
+      this.roles = user.roles;
+    }
   }
+
 }

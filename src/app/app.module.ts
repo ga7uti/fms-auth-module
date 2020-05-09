@@ -11,6 +11,7 @@ import {UserComponent} from './auth/user/user.component';
 import {AdminComponent} from './auth/admin/admin.component';
 import {UpdatePasswordComponent} from './auth/update-password/update-password.component';
 import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.component';
+import {AuthGuard} from './_helpers/auth.guard';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import {ForgotPasswordComponent} from './auth/forgot-password/forgot-password.co
         HttpClientModule,
         ReactiveFormsModule
     ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule {

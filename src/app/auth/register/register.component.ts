@@ -28,19 +28,14 @@ export class RegisterComponent implements OnInit {
         password: new FormControl('', [Validators.required, Validators.minLength(8)]),
         re_password: new FormControl('', [Validators.required, Validators.minLength(8)])
       }),
-      number: new FormControl('', Validators.required)
+      userPhone: new FormControl('', Validators.required)
     });
   }
 
   submit() {
     const formData = this.registerForm.value;
     if (!formData.passwordGroup.password.localeCompare(formData.passwordGroup.re_password)) {
-      const user = new User(
-        formData.fullName,
-        formData.userName,
-        formData.email,
-        formData.passwordGroup.password,
-        formData.number);
+      const user = new User(formData);
 
       this.authService.register(user).subscribe(value => {
         if (value.status) {

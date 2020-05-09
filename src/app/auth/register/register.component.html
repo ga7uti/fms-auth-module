@@ -143,14 +143,14 @@
         id="phone_number"
         placeholder="Enter your phone number "
         name="phone_number"
-        formControlName="number"
+        formControlName="userPhone"
       >
       <div style="margin-top: 5px"
-           *ngIf="registerForm.get('number').invalid
-            && (registerForm.get('number').dirty || registerForm.get('number').touched)"
+           *ngIf="registerForm.get('userPhone').invalid
+            && (registerForm.get('userPhone').dirty || registerForm.get('userPhone').touched)"
            class="alert alert-danger">
         <div
-          *ngIf="registerForm.get('number').errors.required"
+          *ngIf="registerForm.get('userPhone').errors.required"
         >
           Phone Number is required
         </div>
